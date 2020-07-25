@@ -1,17 +1,20 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Table } from "antd";
 
 import AdminLayout from "components/AdminLayout";
-import useService from "hooks/useService";
+import fetchApi from "utils/fetchApi";
 
 const AdminIndexPage = () => {
-  const [res, isLoaded] = useService("https://pokeapi.co/api/v2/pokemon/ditto");
+  const [result, setResult] = useState(undefined);
 
   useEffect(() => {
-    if (isLoaded) {
-      console.log(res);
-    }
-  }, [res]);
+    const callingService = async () => {
+      const res = await fetchApi("https://pokeapi.co/api/v2/pokemon/ditto");
+
+      setResult(res);
+    };
+    callingService();
+  }, []);
 
   return (
     <AdminLayout>
