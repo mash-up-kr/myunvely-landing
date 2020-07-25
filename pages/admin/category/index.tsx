@@ -1,9 +1,49 @@
-import React from "react";
-import { Table } from "antd";
+import React, { useCallback } from "react";
+import { Table, Button } from "antd";
 
 import AdminLayout from "components/AdminLayout";
+import Category from "models/Category";
 
 const AdminCategoryListPage = () => {
+  const handleDelete = useCallback(
+    (id: number) => () => {
+      console.log(id);
+      // TODO: DELETE
+    },
+    [],
+  );
+
+  const columns = [
+    {
+      title: "ID",
+      dataIndex: "id",
+      key: "id",
+      width: 50,
+    },
+    {
+      title: "용품명",
+      dataIndex: "name",
+      key: "name",
+    },
+    {
+      title: "평균 주기",
+      dataIndex: "averageCycle",
+      key: "averageCycle",
+      width: 120,
+    },
+    {
+      title: "삭제",
+      dataIndex: "id",
+      key: "delete",
+      width: 100,
+      render: (id: number) => (
+        <Button onClick={handleDelete(id)} danger>
+          삭제
+        </Button>
+      ),
+    },
+  ];
+
   return (
     <AdminLayout>
       <Table dataSource={dataSource} columns={columns} />
@@ -13,35 +53,15 @@ const AdminCategoryListPage = () => {
 
 export default AdminCategoryListPage;
 
-const dataSource = [
+const dataSource: Category[] = [
   {
-    key: "1",
+    id: 1,
     name: "Mike",
-    age: 32,
-    address: "10 Downing Street",
+    averageCycle: 32,
   },
   {
-    key: "2",
+    id: 2,
     name: "John",
-    age: 42,
-    address: "10 Downing Street",
-  },
-];
-
-const columns = [
-  {
-    title: "Name",
-    dataIndex: "name",
-    key: "name",
-  },
-  {
-    title: "Age",
-    dataIndex: "age",
-    key: "age",
-  },
-  {
-    title: "Address",
-    dataIndex: "address",
-    key: "address",
+    averageCycle: 42,
   },
 ];
