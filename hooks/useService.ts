@@ -20,6 +20,7 @@ const useService = (
       setResult(jsonData);
       setIsLoaded(true);
     };
+    
     callingService();
   }, []);
 
