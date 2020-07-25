@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Table } from "antd";
 
 import AdminLayout from "components/AdminLayout";
+import useService from "hooks/useService";
 
 const AdminIndexPage = () => {
+  const [res, isLoaded] = useService("https://pokeapi.co/api/v2/pokemon/ditto");
+
+  useEffect(() => {
+    if (isLoaded) {
+      console.log(res);
+    }
+  }, [res]);
+
   return (
     <AdminLayout>
       <Table dataSource={dataSource} columns={columns} />
