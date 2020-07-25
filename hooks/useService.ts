@@ -15,7 +15,9 @@ const useService = (
         body,
       });
 
-      setResult(res);
+      const jsonData = await res.json();
+
+      setResult(jsonData);
       setIsLoaded(true);
     };
     callingService();
