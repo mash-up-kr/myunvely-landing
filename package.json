@@ -1,46 +1,48 @@
 {
-  "name": "myunvely-landing",
-  "version": "0.1.0",
-  "private": true,
-  "eslintConfig": {
-    "extends": [
-      "airbnb",
-      "prettier"
-    ],
-    "rules": {
-      "react/jsx-filename-extension": 0,
-      "react/jsx-one-expression-per-line": 0
-    }
-  },
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "@ant-design/icons": "^4.2.1",
-    "@emotion/core": "^10.0.28",
-    "@emotion/styled": "^10.0.27",
-    "@typescript-eslint/eslint-plugin": "^3.7.0",
-    "@typescript-eslint/parser": "^3.7.0",
-    "@zeit/next-css": "^1.0.1",
-    "antd": "^4.4.3",
-    "eslint": "^7.5.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-react": "^7.20.3",
-    "next": "9.4.4",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "react-spring": "^8.0.27"
-  },
-  "devDependencies": {
-    "@types/node": "^12.12.21",
-    "@types/react": "^16.9.16",
-    "@types/react-dom": "^16.9.4",
-    "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-plugin-import": "^2.22.0",
-    "prettier": "^2.0.5",
-    "typescript": "3.7.3"
-  }
+	"name": "myunvely-landing",
+	"version": "0.1.0",
+	"license": "MIT",
+	"private": true,
+	"eslintConfig": {
+		"extends": [
+			"airbnb",
+			"prettier"
+		],
+		"rules": {
+			"react/jsx-filename-extension": 0,
+			"react/jsx-one-expression-per-line": 0
+		}
+	},
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start"
+	},
+	"dependencies": {
+		"@ant-design/icons": "^4.2.1",
+		"@emotion/core": "^10.0.28",
+		"@emotion/styled": "^10.0.27",
+		"@fullpage/react-fullpage": "^0.1.17",
+		"@typescript-eslint/eslint-plugin": "^3.7.0",
+		"@typescript-eslint/parser": "^3.7.0",
+		"@zeit/next-css": "^1.0.1",
+		"antd": "^4.4.3",
+		"eslint": "^7.5.0",
+		"eslint-config-prettier": "^6.11.0",
+		"eslint-plugin-prettier": "^3.1.4",
+		"eslint-plugin-react": "^7.20.3",
+		"next": "9.4.4",
+		"react": "16.13.1",
+		"react-dom": "16.13.1",
+		"react-spring": "^8.0.27"
+	},
+	"devDependencies": {
+		"@types/node": "^12.12.21",
+		"@types/react": "^16.9.16",
+		"@types/react-dom": "^16.9.4",
+		"eslint-config-airbnb-base": "^14.2.0",
+		"eslint-plugin-import": "^2.22.0",
+		"prettier": "^2.0.5",
+		"typescript": "3.7.3"
+	}
 }
