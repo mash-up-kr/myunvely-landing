@@ -1,15 +1,11 @@
-const fetchApi = async (
-  url: string,
-  method: string = "GET",
-  body?: BodyInit,
-) => {
-  const res = await fetch(url, {
-    method,
-    body,
-  });
-  const jsonData = await res.json();
+const fetchApi = async (url: string, method: string = 'GET', body?: BodyInit) => {
+	const res = await fetch(url, {
+		method,
+		body,
+	});
+	const jsonData = await res.json();
 
-  return jsonData;
+	return jsonData;
 };
 
 export default fetchApi;
