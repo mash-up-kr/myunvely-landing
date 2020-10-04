@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { useState } from 'react';
 import { useSpring, animated } from 'react-spring';
+import ReactPageScroller from 'react-page-scroller';
 
 import styled from '@emotion/styled';
 
@@ -14,12 +15,16 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<header>
+			{/* <header>
 				<Header>header</Header>
-			</header>
+			</header> */}
 
 			<main>
-				<MainDiv>
+				<ReactPageScroller>
+					<div>asdsad</div>
+					<div>adsda</div>
+				</ReactPageScroller>
+				{/* <MainDiv>
 					<SpringTest onClick={() => setToggle(!toggle)}>
 						<AnimatedDiv
 							style={{
@@ -36,10 +41,10 @@ export default function Home() {
 						</AnimatedDiv>
 					</SpringTest>
 				</MainDiv>
-				<SubDiv />
+				<SubDiv /> */}
 			</main>
 
-			<footer>FOOTER</footer>
+			{/* <footer>FOOTER</footer> */}
 		</div>
 	);
 }
