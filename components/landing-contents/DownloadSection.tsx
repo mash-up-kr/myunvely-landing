@@ -17,10 +17,13 @@ export default () => {
 					<AppImage data-src="/img_app_screen.png" />
 				</SectionLeft>
 				<SectionRight>
-					<SectionTitle color="#333333">
-						신경쓰지 않아도
+					<TichLogo data-src="/tich_download_section_logo.png" />
+					<SectionTitle color="white">
+						당신의 청결한
 						<br />
-						알아서 알려주니까
+						생활습관
+						<br />
+						첫걸음
 					</SectionTitle>
 				</SectionRight>
 			</SectionFlex>
@@ -34,4 +37,8 @@ const AppImage = styled.img`
 	max-height: 80%;
 	height: 80vh;
 	vertical-align: middle;
+`;
+
+const TichLogo = styled.img`
+	margin-bottom: 35px;
 `;

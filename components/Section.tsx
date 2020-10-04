@@ -23,8 +23,11 @@ export const SectionLeft = styled.div`
 export const SectionRight = styled.div`
 	flex: 2;
 	display: flex;
-	align-items: center;
-	text-align: left;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+
+	margin-left: 30px;
 `;
 
 export const SectionTitle = styled.div<{ color: string }>`
@@ -32,7 +35,6 @@ export const SectionTitle = styled.div<{ color: string }>`
 	display: inline-block;
 	line-height: 60px;
 	font-size: 36px;
-	margin-left: 30px;
 	color: ${props => props.color};
 	text-align: left;
 	font-weight: 700;
