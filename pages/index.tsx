@@ -6,6 +6,7 @@ import styled from '@emotion/styled';
 
 import { FULLPAGE_LICENSE_KEY } from 'utils/constants';
 import LogoSection from 'components/landing-contents/LogoSection';
+import TextAnimationSection from 'components/landing-contents/TextAnimationSection';
 
 interface FullPageProps {
 	fullpageApi: any;
@@ -33,8 +34,7 @@ export default function Home() {
 					render={({ state, fullpageApi }: FullPageProps) => (
 						<ReactFullpage.Wrapper>
 							<LogoSection />
-							<div className="section">asdcas</div>
-							<SubDiv className="section" />
+							<TextAnimationSection />
 						</ReactFullpage.Wrapper>
 					)}
 				/>
