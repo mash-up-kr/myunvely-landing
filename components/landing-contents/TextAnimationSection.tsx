@@ -10,6 +10,9 @@ const texts = [
 	'행주는 오래써도 되려나?',
 ];
 
+const tops = [5, 5, 10, 25, 15, 20, 25, 30, 35, 50, 60, 70, 80, 90, 95];
+const lefts = [-5, 60, 30, 50, 80, -20, 10, 20, 70, 90, 5, 30, 60, 30, 80];
+
 const getRandom = (end: number) => Math.floor(Math.random() * end);
 
 export default () => {
@@ -20,7 +23,7 @@ export default () => {
 			const text = texts[getRandom(texts.length)];
 			const delay = getRandom(20) / 10;
 			return () => (
-				<TextSpan top={getRandom(95)} left={getRandom(95)} delay={delay} key={i}>
+				<TextSpan top={tops[i]} left={lefts[i]} delay={delay} key={i}>
 					{text}
 				</TextSpan>
 			);
