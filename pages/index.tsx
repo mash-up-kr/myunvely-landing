@@ -1,8 +1,16 @@
 import Head from 'next/head';
 import { useState } from 'react';
 import { useSpring, animated } from 'react-spring';
-
+import ReactFullpage from '@fullpage/react-fullpage';
 import styled from '@emotion/styled';
+
+import { FULLPAGE_LICENSE_KEY } from 'utils/constants';
+import LogoSection from 'components/landing-contents/LogoSection';
+
+interface FullPageProps {
+	fullpageApi: any;
+	state: any;
+}
 
 export default function Home() {
 	const [toggle, setToggle] = useState(false);
@@ -14,12 +22,23 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<header>
+			{/* <header>
 				<Header>header</Header>
-			</header>
+			</header> */}
 
 			<main>
-				<MainDiv>
+				<ReactFullpage
+					licenseKey={FULLPAGE_LICENSE_KEY}
+					navigation={true}
+					render={({ state, fullpageApi }: FullPageProps) => (
+						<ReactFullpage.Wrapper>
+							<LogoSection />
+							<div className="section">asdcas</div>
+							<SubDiv className="section" />
+						</ReactFullpage.Wrapper>
+					)}
+				/>
+				{/* <MainDiv>
 					<SpringTest onClick={() => setToggle(!toggle)}>
 						<AnimatedDiv
 							style={{
@@ -36,10 +55,10 @@ export default function Home() {
 						</AnimatedDiv>
 					</SpringTest>
 				</MainDiv>
-				<SubDiv />
+				<SubDiv /> */}
 			</main>
 
-			<footer>FOOTER</footer>
+			{/* <footer>FOOTER</footer> */}
 		</div>
 	);
 }
@@ -80,6 +99,6 @@ const AnimatedDiv = styled(animated.div)`
 `;
 
 const SubDiv = styled.div`
-	height: 100vh;
+	height: 200px;
 	background: green;
 `;
