@@ -1,45 +1,32 @@
 import React, { useEffect, useState } from 'react';
 import { Table } from 'antd';
-
+import User from 'models/User';
 import AdminLayout from 'components/AdminLayout';
 import fetchApi from 'utils/fetchApi';
 
 const AdminIndexPage = () => {
-	// @ts-ignore
-	const [result, setResult] = useState(undefined);
+	const [users, setUsers] = useState();
 
 	useEffect(() => {
 		const callingService = async () => {
-			const res = await fetchApi('https://pokeapi.co/api/v2/pokemon/ditto');
-
-			setResult(res);
+			const res = await fetchApi('admin/users');
+			setUsers(
+				res.map((user: User) => {
+					return { key: user.id, ...user };
+				}),
+			);
 		};
 		callingService();
 	}, []);
 
 	return (
 		<AdminLayout>
-			<Table dataSource={dataSource} columns={columns} />
+			<Table dataSource={users} columns={columns} />
 		</AdminLayout>
 	);
 };
 
 export default AdminIndexPage;
-
-const dataSource = [
-	{
-		key: '1',
-		name: 'Mike',
-		age: 32,
-		address: '10 Downing Street',
-	},
-	{
-		key: '2',
-		name: 'John',
-		age: 42,
-		address: '10 Downing Street',
-	},
-];
 
 const columns = [
 	{
@@ -48,13 +35,13 @@ const columns = [
 		key: 'name',
 	},
 	{
-		title: 'Age',
-		dataIndex: 'age',
-		key: 'age',
+		title: 'Email',
+		dataIndex: 'email',
+		key: 'email',
 	},
 	{
-		title: 'Address',
-		dataIndex: 'address',
-		key: 'address',
+		title: 'Role',
+		dataIndex: 'role',
+		key: 'role',
 	},
 ];
