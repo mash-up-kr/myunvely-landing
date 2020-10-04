@@ -114,6 +114,7 @@ export default AdminProductListPage;
 
 const dataSource: Product[] = [
 	{
+		key: 1,
 		id: 1,
 		category: '면도기',
 		name: '면도기01',
@@ -124,34 +125,15 @@ const dataSource: Product[] = [
 		price: 1500,
 	},
 	{
+		key: 2,
 		id: 2,
 		category: '면도기',
-		name: '면도기01',
-		description: '짱짱 좋은 면도기',
-		cycle: 40,
+		name: '면도기02',
+		description: '짱짱 대박 좋은 면도기',
+		cycle: 80,
 		imageUrl:
-			'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Maquinilla_de_afeitar_desechable.JPG/250px-Maquinilla_de_afeitar_desechable.JPG',
-		price: 1500,
-	},
-	{
-		id: 3,
-		category: '면도기',
-		name: '면도기01',
-		description: '짱짱 좋은 면도기',
-		cycle: 40,
-		imageUrl:
-			'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Maquinilla_de_afeitar_desechable.JPG/250px-Maquinilla_de_afeitar_desechable.JPG',
-		price: 1500,
-	},
-	{
-		id: 4,
-		category: '면도기',
-		name: '면도기01',
-		description: '짱짱 좋은 면도기',
-		cycle: 40,
-		imageUrl:
-			'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Maquinilla_de_afeitar_desechable.JPG/250px-Maquinilla_de_afeitar_desechable.JPG',
-		price: 1500,
+			'https://image.ohou.se/i/bucketplace-v2-development/uploads/productions/158625157071113845.jpg?gif=1&w=1280&h=1280&c=c.jpg',
+		price: 150000,
 	},
 ];
 

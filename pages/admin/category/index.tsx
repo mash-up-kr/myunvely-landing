@@ -93,13 +93,15 @@ export default AdminCategoryListPage;
 
 const dataSource: Category[] = [
 	{
+		key: 1,
 		id: 1,
-		name: 'Mike',
+		name: '면도기',
 		averageCycle: 32,
 	},
 	{
+		key: 2,
 		id: 2,
-		name: 'John',
+		name: '칫솔',
 		averageCycle: 42,
 	},
 ];

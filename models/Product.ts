@@ -1,4 +1,5 @@
 interface Product {
+	key: number;
 	id: number;
 	category: string;
 	name: string;
