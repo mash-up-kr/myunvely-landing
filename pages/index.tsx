@@ -5,6 +5,7 @@ import { FULLPAGE_LICENSE_KEY } from 'utils/constants';
 import LogoSection from 'components/landing-contents/LogoSection';
 import TextAnimationSection from 'components/landing-contents/TextAnimationSection';
 import AppSection from 'components/landing-contents/AppSection';
+import DownloadSection from 'components/landing-contents/DownloadSection';
 
 export default function Home() {
 	return (
@@ -24,6 +25,7 @@ export default function Home() {
 							<LogoSection />
 							<TextAnimationSection />
 							<AppSection />
+							<DownloadSection />
 						</ReactFullpage.Wrapper>
 					)}
 				/>

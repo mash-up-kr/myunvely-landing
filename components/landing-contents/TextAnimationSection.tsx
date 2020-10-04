@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
 import { keyframes } from '@emotion/core';
+import {
+	SectionFlex,
+	SectionLeft,
+	SectionRight,
+	SectionTitle,
+	SectionWrapper,
+} from 'components/Section';
 
 const texts = [
 	'칫솔은 한 3개월 된 것 같은데',
@@ -32,17 +39,23 @@ export default () => {
 	}, []);
 
 	return (
-		<SectionWrapper className="section">
+		<SectionWrapper className="section" background="#3a3a3a">
 			<div>{textSpans.map(sp => sp())}</div>
-			<VideoWrapper autoPlay muted>
-				<source data-src="/animation_1.mp4" type="video/mp4" />
-				video 태그를 지원하지 않는 브라우저입니다.
-			</VideoWrapper>
-			<SectionTitle>
-				나와 가장 가까운
-				<br />
-				청결 사이클을
-			</SectionTitle>
+			<SectionFlex>
+				<SectionLeft>
+					<VideoWrapper autoPlay muted>
+						<source data-src="/animation_1.mp4" type="video/mp4" />
+						video 태그를 지원하지 않는 브라우저입니다.
+					</VideoWrapper>
+				</SectionLeft>
+				<SectionRight>
+					<SectionTitle color="white">
+						나와 가장 가까운
+						<br />
+						청결 사이클을
+					</SectionTitle>
+				</SectionRight>
+			</SectionFlex>
 		</SectionWrapper>
 	);
 };
@@ -74,23 +87,6 @@ const TextSpan = styled.span<{ top: number; left: number; delay: number }>`
 	animation: ${fadeinout} 5s linear;
 	animation-delay: ${props => props.delay}s;
 	animation-direction: alternate;
-`;
-
-const SectionWrapper = styled.div`
-	position: relative;
-	background-color: #3a3a3a;
-	text-align: center;
-`;
-
-const SectionTitle = styled.div`
-	position: relative;
-	display: inline-block;
-	margin-left: 100px;
-	line-height: 60px;
-	font-size: 36px;
-	color: white;
-	text-align: left;
-	font-weight: 700;
 `;
 
 const VideoWrapper = styled.video`
